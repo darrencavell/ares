@@ -1,4 +1,5 @@
 const path = require('path')
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
@@ -7,11 +8,6 @@ module.exports = {
     path: path.resolve(__dirname, 'public'),
     publicPath: '/',
     filename: 'bundle.js'
-  },
-  mode: 'development',
-  devServer: {
-    port: 8888,
-    historyApiFallback: true
   },
   module: {
     rules: [
@@ -32,12 +28,6 @@ module.exports = {
         }
       },
       {
-        test: /\.html$/,
-        use: {
-          loader: "html-loader"
-        }
-      },
-      {
         test: /\.css$/,
         use: {
           loader: "style-loader"
@@ -46,6 +36,7 @@ module.exports = {
     ]
   },
   plugins: [
+    new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       title: "Ares - React Scaffolding",
       template: "./public/index.html",
