@@ -5,7 +5,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 module.exports = {
   entry: './src/index.js',
   output: {
-    path: path.resolve(__dirname, 'public'),
+    path: path.resolve(__dirname, 'build'),
     publicPath: '/',
     filename: 'bundle.js'
   },
@@ -28,9 +28,17 @@ module.exports = {
         }
       },
       {
-        test: /\.css$/,
+        test: /\.css$/, 
+        loader: "style-loader!css-loader" 
+      },
+      {
+        test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
         use: {
-          loader: "style-loader"
+          loader: 'url-loader', 
+          options: {
+            limit: 1024000,
+            name: '[name].[ext]',
+          }
         }
       }
     ]
@@ -42,5 +50,21 @@ module.exports = {
       template: "./public/index.html",
       filename: "index.html"
     })
-  ]
+  ],
+  optimization: {
+    splitChunks: {
+      chunks: "all",
+      cacheGroups: {
+        vendors: {
+          test: /[\\/]node_modules[\\/]/,
+          priority: -10
+        },
+        default: {
+          minChunks: 2,
+          priority: -20,
+          reuseExistingChunk: true
+        }
+      }  
+    }
+  }
 }

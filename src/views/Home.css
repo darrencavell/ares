@@ -1,0 +1,111 @@
+@media screen and (min-width: 0px) {
+  .jumbotron {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 30vh;
+    position: relative;
+    background-image: linear-gradient(90deg, rgba(119,114,193,0.6) 0%, rgba(77,123,180,0.6) 100%), url('../assets/mountain.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+  }
+  .jumbotron--inner {
+    padding: 18px 12px;
+  }
+  .header {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+  }
+  .header > .logo {
+    background-image: url('../assets/flooop.png');
+    width: 100px;
+    height: auto;
+    background-size: cover;
+    background-position: center;
+  }
+  .content {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .content > p {
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight: 300;
+    color: white;
+    margin: 0;
+  }
+  .content > h1 {
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: white;
+    margin: 0;
+  }
+
+  .profile-box {
+    /* width: 100%; */
+    /* width: 360px; */
+    flex: 1;
+  }
+  .profile-box > .title {
+    padding: 12px 18px;
+    font-family: "HelveticaNeue-Medium", "Helvetica Neue Medium", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    background: linear-gradient(90deg, rgb(107, 200, 181) 33%, rgb(106, 192, 185) 66%, rgb(107, 200, 181) 100%);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .profile-box > .title > input {
+    border: 0;
+    outline: 0;
+    padding: 0;
+    background-color: transparent;
+    color: white;
+  }
+  .profile-box > .profile-box--list {
+    display: flex;
+    padding: 15px 20px;
+  }
+  .profile-box .profile-box--description {
+    margin-left: 20px;
+    width: calc(100% - 40px);
+  }
+  .profile-box .profile-box--description .title {
+    font-weight: bold;
+    font-size: 18px;
+    font-family: "HelveticaNeue-Medium", "Helvetica Neue Medium", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  }
+  .profile-box .profile-box--description p {
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    margin: 0;
+  }
+
+  .quote-box {
+    flex: 3;
+  }
+
+  .container {
+    min-height: calc(100vh - 30vh);
+    background-color: rgb(245, 245, 245);
+    padding: 60px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .header {
+    padding: 24px 36px; 
+  }
+  .content {
+    padding: 24px 40px;
+  }
+  .header > .logo {
+    height: 40px;
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "fullname": "Kevin Tigravictor",
+      "message": "Currently flying with Blue Bird",
+      "status": "ONLINE",
+      "image_profile": "https://user-images.githubusercontent.com/32709094/74676598-ed141400-51e8-11ea-81bf-3f9936f2dcb8.jpg"
+    },
+    {
+      "id": 2,
+      "fullname": "Danny Ferian",
+      "message": "I love to eat ramen",
+      "status": "OFFLINE",
+      "image_profile": "https://user-images.githubusercontent.com/32709094/74676532-c3f38380-51e8-11ea-96f1-b1f2b5de569c.jpg"
+    },
+    {
+      "id": 3,
+      "fullname": "Willy Setiawan",
+      "message": "willysetiawan.com",
+      "status": "OFFLINE",
+      "image_profile": "https://user-images.githubusercontent.com/32709094/74676825-73305a80-51e9-11ea-87ab-ce3f7a91b108.jpg"
+    }
+  ]
+}
